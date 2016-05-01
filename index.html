@@ -1,159 +1,19 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!--电话 email-->
+    <meta name="format-detection" content="telephone=no,email=no"/>
+    <!--去掉iphone的工具栏-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!--iphoe下拉后提示出现的标题-->
+    <meta name="apple-mobile-web-app-title" content="标题">
     <title>个人简历</title>
     <link rel="stylesheet" href="css/index.css">
     <script type="text/javascript" src="js/index.js"></script>
-    <style type="text/css">
-        *{
-           padding: 0;
-            margin: 0;
-            font-family: 'Microsoft Yahei',Tahoma,Helvetica,Arial,sans-serif;
-        }
-        html,body{
-            height: 100%;
-            width: 100%;
-            font-size: 100px;
-            overflow: hidden;
 
-        }
-        .main{
-            height: 100%;
-            width: 6.4rem;
-
-        }
-        .list{
-            width: 6.4rem;
-            list-style: none;
-        }
-        .list li{
-            position: absolute;
-            top: 0;
-            left: 0;
-            color: whitesmoke;
-            height: 100%;
-            width: 6.4rem;
-            z-index: 5;
-            background: black;
-            display: none;
-
-        }
-        .list li:nth-child(1){
-            display: block;
-
-        }
-        .li1{
-            margin: 30% auto 0;
-            display: flex;
-            flex-flow: column nowrap;
-            align-items: center;
-        }
-
-        .zIndex{
-            z-index: 11;
-        }
-
-        .photo{
-            transition:  transform 1s;
-            height: 2.5rem;
-            width: 2.5rem;
-            background: whitesmoke;
-            border-radius: 50%;
-            border: 0.05rem solid white;
-            background: url("imge/photo.jpg") no-repeat -0.55rem 0;
-            background-size: 144% 100%;
-            transform: translate(0,-1.2rem);
-            transition: transform 1s;
-
-        }
-       #photo{
-
-            transform: translate(0,0rem);
-
-
-        }
-
-     .name{
-         height: 0.8rem;
-         width: 2.2rem;
-         line-height:  1.3rem;
-         font-size: 0.3rem;
-         text-align: center;
-         color:#F29419;
-         font-weight: bold;
-
-     }
-        .job{
-            height: 0.8rem;
-            width: 3rem;
-            text-align: center;
-            line-height:  0.8rem;
-            font-size: 0.15rem;
-            letter-spacing: 0.02rem;
-            color: whitesmoke;
-        }
-        .start{
-            width: 6.4rem;
-            height: 0.5rem;
-            position: relative;
-            bottom: 0;
-            color: whitesmoke;
-            text-align: center;
-            font-size: 0.5rem;
-            font-weight: bold;
-             top: 4.5rem;
-
-        }
-        #start{
-            animation: start 2s infinite;
-        }
-        @keyframes start {
-            0%{
-                opacity: 0;
-                transform: translate(0,-0.5rem);
-            }
-            50%{
-                opacity: 1;
-                transform: translate(0,-0.6rem);
-            }
-            100%{
-                opacity: 0;
-                transform: translate(0,-0.7rem);
-            }
-
-        }
-        #text{
-            animation: text 2s 1;
-        }
-        @keyframes text {
-            0% {
-                opacity: 0;
-
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-        #job{
-            animation: job 2s 1;
-        }
-        @keyframes job {
-            0% {
-                transform:skew(0deg,0deg) ;
-
-            }
-            75%{
-                transform:skew(0deg,180deg) ;
-            }
-            100% {
-                transform:skew(0deg,360deg) ;
-            }
-
-        }
-    </style>
 </head>
 <body>
  <div class="main">
@@ -166,7 +26,40 @@
              </div>
              <div class="start">^</div>
          </li>
-         <li>2</li>
+         <li>
+             <div class="whiteliner"></div>
+             <div class="twoCenter">
+                 <div class="titleG"></div>
+                 <div class="twoCenterRight">
+                     <div class="centerLeft1">
+                         <span class="shoolName1">毕业院校</span>
+                         <span index="1" class="shoolName2">北京大学</span>
+                     </div>
+                     <div class="centerLeft2">
+                         <span class="shoolName1">专业</span>
+                         <span index="2"  class="shoolName2">前端工程师</span>
+                     </div>
+                     <div class="centerLeft3">
+                         <span class="shoolName1">民族</span>
+                         <span index="3"  class="shoolName2">汉</span>
+                     </div>
+                     <div class="centerLeft4">
+                         <span class="shoolName1">手机</span>
+                         <span index="4"  class="shoolName2"><lable>15764277163</lable></span>
+                     </div>
+                     <div class="centerLeft5">
+                         <span class="shoolName1">邮箱</span>
+                         <span index="5"  class="shoolName2">shinyzhang@163.com</span>
+                     </div>
+                     <div class="centerLeft6">
+                         <span class="shoolName1">出生年月</span>
+                         <span index="6"  class="shoolName2">1992.05.15</span>
+                     </div>
+                 </div>
+
+             </div>
+             <div class="start1">^</div>
+         </li>
          <li>3</li>
          <li>4</li>
          <li>5</li>

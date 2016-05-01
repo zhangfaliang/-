@@ -10,7 +10,8 @@ document.addEventListener("DOMContentLoaded", function () {
         winW = 640;
     }
     document.documentElement.style.fontSize = winW / scale + "px";
-
+    //得到所有的  var shoolName2
+    var shoolName2 = document.querySelectorAll(".shoolName2")
     // 场景搭建
     // 移动距离就是 当前的哥哥或者弟弟 上移动 或者下移动  本身不懂动
     var oLis = document.querySelectorAll(".list>li");
@@ -69,22 +70,30 @@ document.addEventListener("DOMContentLoaded", function () {
         e.preventDefault();
 
     }
+
     function end(e) {
         oLis[this.pervIndex].style.webkitTransform = "translate(0px,0px)";
         oLis[this.pervIndex].style.webkitTransition = "1s";
         [].forEach.call(oLis, function () {
             arguments[0].addEventListener("webkitTransitionEnd", function () {
                 this.style.webkitTransition = "";
-                this.flag=true;
-                switch (this.index){
+                this.flag = true;
+                switch (this.index) {
                     case 0:
-                        photoShow();
+                        photoShow(1);
+                        // showLi(0);
                         break;
                     case 1:
-                        photoHide();
+                        showLi(1);
+                        photoShow(0);
+                        break;
+                    case 2:
+                        showLi(0);
+                        break;
+                    case 3:
                         break;
                     case 4:
-                        photoHide();
+                        photoShow(0);
                         break
                 }
             }, false)
@@ -93,25 +102,71 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     }
-    var photo=document.querySelector(".photo");
-    var start=document.querySelector(".start");
-    var name =document.querySelector(".name");
-    var job=document.querySelector(".job");
-    function photoShow() {
-        job.id="job";
-        start.id="start";
-        name.id="text"
-        photo.id="";
-        photo.id="photo";
+
+    //得到所有的shoolName2
+
+    var photo = document.querySelector(".photo");
+    var start = document.querySelector(".start");
+    var name = document.querySelector(".name");
+    var job = document.querySelector(".job");
+
+    function photoShow(flag) {
+        if (flag) {
+            job.id = "job";
+            start.id = "start";
+            name.id = "text"
+            photo.id = "photo";
+        } else {
+            job.id = "";
+            start.id = ""
+            photo.id = "";
+            name.id = "";
+        }
+
     }
-    function photoHide() {
-        job.id="";
-        start.id=""
-        photo.id="";
-        name.id="";
-        photo.style.webkitTransform="translate(0,-1.2rem);";
+
+    // #li2 显示
+    function showLi(flag) {// titleG 的放大缩小
+        var titleG = document.querySelector(".titleG");
+        //一条线
+        var whiteliner = document.querySelector(".whiteliner");
+        // start 下面的跳动
+        var start1 = document.querySelector(".start1");
+        if (flag) {
+            //跳动
+            start1.id = "start1";
+            titleG.id = "titleG";
+            // 2
+            whiteliner.style.height = "100%";
+            whiteliner.style.webkitTransition = "height 2s";
+            // 文字移动
+            [].forEach.call(shoolName2, function (item, index) {
+                /*    ="translate 2s"*/
+                item.id = "li2";
+                item.style.webkitTransition = "transform " + (parseFloat(item.getAttribute("index")) * 0.5) + "s";
+
+            })
+        } else {
+            // 跳动
+            //跳动
+            start1.id="";
+            whiteliner.style.height = "10%";
+            whiteliner.style.webkitTransition = "";
+            // titleG 的放大缩小
+            titleG.id = "";
+            // 文字移动
+            [].forEach.call(shoolName2, function (item, index) {
+                item.id = "";
+                item.style.webkitTransition = null;
+
+            })
+        }
+
     }
-    document.addEventListener("touchstar",function () {},false);
-    photoShow();
+
+    document.addEventListener("touchstar", function () {
+    }, false);
+    photoShow(1);
 }, false)
+
 
