@@ -243,6 +243,9 @@ html,body{
     font-size: 0.28rem;
     vertical-align: bottom;
 }
+.shoolName2 label{
+    color: white;
+}
 .shoolName2{
     transform: translate(5rem,0);
     -webkit-transform: translate(5rem,0);
@@ -293,5 +296,195 @@ html,body{
         opacity: 0;
         transform: translate(0,-0.7rem);
     }
+
+}
+
+.nblong{
+    width: 100%;
+    font-size: 0.35rem;
+    letter-spacing: 0.05rem;
+    color: goldenrod;
+    text-align: center;
+    line-height: 2.5rem;
+    height: 2.5rem;
+    transform: translate(-5.2rem,0);
+
+}
+
+/*.outrtLong p{
+    opacity: 0;
+}*/
+
+/*.outrtLong div{
+    opacity: 0;
+    transform: translate(-5.2rem,0);
+}*/
+.centerLong{
+    height: 7rem;
+   /* background: royalblue;*/
+}
+.initLong{
+    margin:0.2rem auto;
+    height: 1.2rem;;
+    width: 80%;
+
+}
+@keyframes opcityP {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+
+}
+#opcityP{
+    animation: opcityP 1;
+}
+.initLong>p{
+    width: 100%;
+    float: left;
+    background: black;
+    width:100%;
+    color: white;
+    text-align:left;
+    height: 0.7rem;
+    line-height: 0.7rem;
+}
+.initLong>div{
+    clear: both;
+    height: 0.425rem;
+}
+.outrtLong {
+    height: 0.425rem;
+    background: white;
+    border-radius: 0.1rem;
+    width: 100%;
+    float: left;
+}
+.outrtLong>p{
+    text-align: center;
+    line-height: 0.42rem;
+    height: 0.425rem;
+    width: 10%;
+    float: left;
+}
+.outrtLong>div{
+    position: relative;
+    top: 0.13rem;
+    left: 0.2rem;
+    margin: auto;
+    height: 0.2rem;
+    background: goldenrod;
+    border-radius: 0.2rem;
+    width: 80%;
+    float: left;
+}
+.jobExprom{
+    height: 1.8rem;
+    width: 100%;
+    color: white;
+    font-size: 0.4rem;
+    line-height: 1.8rem;
+    text-align: center;
+}
+.jobExpromall{
+    width: 100%;
+}
+.jobExprom1,.jobExprom2,.jobExprom3{
+    margin: 0.1rem auto;
+    height: 2.5rem;
+    width: 80%;
+    color: white;
+    font-size: 0.4rem;
+    line-height: 2.5rem;
+    text-align: center;
+}
+.jobExpromLeft{
+    float: left;
+    width: 100%;
+    height: 1rem;
+}
+.jobExpromRight{
+    margin-top: 0.25rem;
+    width: 95%;
+    text-indent: 0.15rem;
+    height: 1rem;
+    font-size: 0.25rem;
+    line-height: 0.3rem;
+    color: white;
+    float: right;
+    text-align: left;
+}
+.flagLeft{
+    float: left;
+    height: 100%;
+    width: 5%;
+
+    background: goldenrod;
+}
+.jobExpromLeft h3,.jobExpromLeft p{
+    text-indent: 0.15rem;
+    color: goldenrod;
+    line-height: 0.3rem;
+    font-size: 0.35rem;
+    text-align: left;
+    height: 50%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    float: left;
+    width: 80%;
+}
+.jobExpromLeft p{
+    display: block;
+    height: 50%;
+    vertical-align: bottom;
+    color: white;
+    font-size: 0.3rem;
+    line-height: 0.7rem;
+}
+.lastDiv{
+    height: 5.8rem;
+    width: 90%;
+    margin:2.4rem auto;
+
+}
+.phoneNumber{
+    height: 2rem;
+    width: 2rem;
+    margin:  auto;
+    background: hotpink;
+    border-radius: 50%;
+    margin-bottom: 0.4rem;
+}
+.lookMeInner p{
+    font-size: 0.35rem;
+    margin-top: 0.2rem;
+    /*   line-height: 2.5rem;*/
+    text-align: center;
+    color: goldenrod;
+}
+.lookMe{
+    height: 2rem;
+    width: 2.5rem;
+    margin: auto;
+
+
+
+}
+.callMe{
+    height: 0.5rem;
+    width: 2.5rem;
+    letter-spacing: 0.05rem;
+    background: goldenrod;
+    margin: auto;
+    color: white;
+    font-size: 0.2rem;
+    line-height: 0.5rem;
+    text-align: center;
 
 }

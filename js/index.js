@@ -89,10 +89,13 @@ document.addEventListener("DOMContentLoaded", function () {
                         break;
                     case 2:
                         showLi(0);
+                        liShow3(1)
                         break;
                     case 3:
+                        liShow3(0)
                         break;
                     case 4:
+                        liShow3(0)
                         photoShow(0);
                         break
                 }
@@ -109,22 +112,39 @@ document.addEventListener("DOMContentLoaded", function () {
     var start = document.querySelector(".start");
     var name = document.querySelector(".name");
     var job = document.querySelector(".job");
+    // # li3 显示
+    // 得到 我的擅长
+    function liShow3(flag) {
+        var nblong=document.querySelector(".nblong");
+        var initLongAll=document.querySelectorAll(".initLong");
+        // 得到p
+         var initLongP=document.querySelectorAll(".shangchang");
+        // 得到所有的黄线
+        var outrtLongAll=document.querySelectorAll(".outrtLong");
+        if(flag){
+            // 显示
+            nblong.style.webkitTransform="translate(0rem,0rem)";
+            nblong.style.webkitTransition="translate 2s";
+            for(var i=0,len=outrtLongAll.length;i<len;i++){
+                outrtLongAll[i].style.webkitTransform="translate(0rem,0rem)";
+               /* outrtLongAll[i].style.webkitTransition="translate "+(i*0.3)+"s";
+                initLongP[i].id="opcityP"*/
+                initLongP[i].id="opcityP"
+            }
+        }else{
+            // 隐藏
+            nblong.style.webkitTransition="";
+            for(var i=0,len=outrtLongAll.length;i<len;i++){
+                initLongP.id=""
+                outrtLongAll[i].addEventListener("webkitTransition",function () {
 
-    function photoShow(flag) {
-        if (flag) {
-            job.id = "job";
-            start.id = "start";
-            name.id = "text"
-            photo.id = "photo";
-        } else {
-            job.id = "";
-            start.id = ""
-            photo.id = "";
-            name.id = "";
+                    outrtLongAll[i].style.webkitTransition="";
+                })
+
+            }
         }
 
     }
-
     // #li2 显示
     function showLi(flag) {// titleG 的放大缩小
         var titleG = document.querySelector(".titleG");
@@ -163,6 +183,23 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
     }
+    function photoShow(flag) {
+        if (flag) {
+            job.id = "job";
+            start.id = "start";
+            name.id = "text"
+            photo.id = "photo";
+        } else {
+            job.id = "";
+            start.id = ""
+            photo.id = "";
+            name.id = "";
+        }
+
+    }
+
+
+
 
     document.addEventListener("touchstar", function () {
     }, false);
